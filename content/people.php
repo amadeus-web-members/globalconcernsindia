@@ -22,7 +22,7 @@ foreach ($sheet->rows as $ix => $item) {
 		sectionId($safeGroup);
 		echo '<a name="' . $safeGroup . '"></a>';
 		echo '<h1 style="text-align: center;">' . $group . '</h1>';
-		section('end');
+		sectionEnd();
 	}
 	$lastGroup = $group;
 
@@ -51,4 +51,4 @@ foreach ($sheet->rows as $ix => $item) {
 	if ($ix != count($sheet->rows) - 1) contentBox('end');
 }
 
-section('end');
+sectionEnd();

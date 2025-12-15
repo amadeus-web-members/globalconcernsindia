@@ -3,11 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap');
 
 :root {
-	--cnvs-themecolor: #9FC7DA;
-	--cnvs-body-bg: transparent;
-		--cnvs-footer-bg: #060607;
-	--amadeus-site-h2-bgd: #E1F2FF;
-	--after-content-background: #C8D9F8;
+	--amadeus-site-h2-bgd: #c6f3f3;
 }
 
 .sub-theme-kindergarten #header-wrap  { --cnvs-header-bg: transparent; }
@@ -20,7 +16,7 @@
 	background-image: url(themed-border.png);
 }
 
-#content:not(.node-index #content):not(.sub-theme-kindergarten #content) { --cnvs-link-color: #739BCA; background: url(water-1514818.jpg) repeat; padding-top: 20px; }
+#content { --cnvs-link-color: #739BCA; padding-top: 20px; }
 #content h2:first { margin-top: 0; }
 
 #content a {
@@ -29,18 +25,9 @@
 	line-height: 1.2;
 }
 
-.spacer { background-color: var(--amadeus-site-h2-bgd)!important; }
-.spacer h1 { text-decoration: underline; }
-
-#copyrights, body, .composite-work > section {
-    background-color: var(--amadeus-site-body-background, #eee)!important;
-}
-
 .brinda-adige-icon { background-image: url(brinda-adige-icon.png); }
 .centre-icon { background-image: url(centre-icon.png); }
-.png-icon { background-size: cover; }
-
-#footer-social i { top: -8px; position: relative; }
+.png-icon { background-size: contain; background-position: left center; background-repeat: no-repeat; padding-left: 1.6rem; }
 
 .node-donate .engage ol li { margin-bottom: 6px!important; }
 

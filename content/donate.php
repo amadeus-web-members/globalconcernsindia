@@ -46,4 +46,4 @@ echo cbWrapAndReplaceHr(replaceItems($content, [
 	'razorpay-links' => $amounts,
 ], '%'));
 
-section('end');
+sectionEnd();

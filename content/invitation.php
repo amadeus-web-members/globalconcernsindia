@@ -26,4 +26,4 @@ foreach ($sections as $ix => $name) {
 	if ($ix != count($sections) - 1) contentBox('end');
 }
 
-section('end');
+sectionEnd();

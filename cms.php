@@ -11,6 +11,9 @@ variables([
 	'custom-footer' => true,
 	'no-network-in-footer' => true,
 
+	'skip-directory' => $skipDirNSeo = true || !variable('local'), //TODO: HIGH: SDP: SEO
+	'no-seo-info' => $skipDirNSeo,
+
 	'google-analytics' => 'G-8HS3SCXZL2',
 
 	'email' => 'brinda@globalconcernsindia.org',

@@ -21,6 +21,10 @@
 .node-index .in-page { display: none!important; }
 
 .alternate-color { color: #A42C96; }
+.page-menu-title .btn { --bs-btn-padding-x: 0px; font-weight: bold; letter-spacing: 2px;
+	--bs-btn-color: cyan; font-family: var(--amadeus-content-font); }
+.page-menu-nav a { font-family: var(--cnvs-primary-menu-font); font-size: 125%; }
+
 #content { color: #1E3973; font-size: 22px; line-height: 1.2; }
 #content h3.cursive { font-size: 45px; }
 

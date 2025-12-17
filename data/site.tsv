@@ -8,6 +8,10 @@ siteMenuName	Home
 scaffold_no	search, sitemap
 sections	programs, archives, articles
 sections_todo	events, community
+
+mediakit	?content=EFF&heading=CEFFFF&link=A42C96
+fonts	content-font=Playfair+Display&cursive=Yuji+Mai&menu=Quintessential&menu-size=1.5rem&menu-height=44px
+
 local-url	http://localhost/organizations/globalconcernsindia/
 live-url	https://organizations.amadeusweb.world/globalconcernsindia/
 live-url_final	https://globalconcernsindia.org/

@@ -4,14 +4,8 @@ $name = 'Global Concerns India';
 variables([
 	'site-home-in-menu' => true,
 	'home-link-to-section' => true,
-	//TODO: resources - 'sections' => ['programs', 'articles'], //TODO: Later - 'events', 'resources', 'community',
+	//TODO: 'autofix-encoding' => true,
 
-	'autofix-encoding' => true,
-	//'sub-theme' => variable('node') == 'schooling' ? 'kindergarten' : 'nonprofit',
-
-	/*
-	'theme-color' => '22B9FE',
-	*/
 	'footer-introduction' => 'GCI is a community-based organization dedicated to empowering vulnerable communities, especially urban and rural poor and other marginalized groups, across Bengaluru, Kolar, and Chikkaballapur.',
 	'footer-variation' => 'no-widget',
 	'custom-footer' => true,
@@ -36,26 +30,46 @@ variables([
 		[ 'type' => 'centre-icon png-icon', 'url' => 'https://www.facebook.com/GCI.CreativityCentre/', 'name' => 'Creativity Centre on FB' ],
 		[ 'type' => 'linkedin', 'url' => 'https://www.linkedin.com/company/global-concerns-india/', 'name' => 'LinkedIn' ],
 		[ 'type' => 'brinda-adige-icon png-icon', 'url' => 'https://www.linkedin.com/in/brinda-adige/', 'name' => 'Brinda on LI' ],
-		//[ 'type' => 'youtube', 'url' => 'https://www.youtube.com/@GlobalConcernsIndia', 'name' => 'youtube: Global Concerns India Channel' ],
-		//TODO: Insta, Newsletter / groups.io
+		[ 'type' => 'youtube', 'url' => 'https://www.youtube.com/@GlobalConcernsIndia', 'name' => 'YouTube' ],
+		//TODO: Newsletter / groups.io
+	],
+
+
+	'blur-banners-at' => ['index', 'schooling'],
+
+	'htmlReplaces' => [
+		'home-message' => 'Inside <b>each of us</b> are powers so strong, treasures so rich, possibilities so endless, that to command them <b>all to action</b>, would <b>change the lives of people</b><br />less privileged.',
+		'home-message-finale' => 'We invite you to <b>celebrate life</b> with us &mdash;<br />life in <b>all its fullness</b>.',
+		'donate-callout' => 'Global Concerns India invites you to join us in promoting holistic development of children and women. Your support will ensure education, nutrition, health, social protection, skill & entrepreneurial training. Thank you for sharing our vision to positively impact the lives of people less privileged and strengthening our mission to reduce illiteracy, poverty & violence in families living in vulnerable geographies.',
 	],
 ]);
 
-addStyle('site-forv8', SITEASSETS);
+addStyle('styles', SITEASSETS);
 
-function enrichThemeVars_todo($vars, $what) {
-	if ($what == 'header' && variable('sub-theme') == 'kindergarten')
-		if (!getPageParameterAt(1))
-			$vars['optional-slider'] = getSnippet('kindergarten-hero');
+function enrichThemeVars($vars, $what) {
+	if ($what == 'header' && nodeIs(SITEHOME))
+		$vars['optional-slider'] = getSnippet('parallax-slider');
 
 	return $vars;
 }
 
-function before_file_todo() {
-	if (!in_array($at = variable('node'), variableOr('default-banners-at', []))) return;
-	echo '<div class="banner banner-' . $at . '">';
-	makePLImages('assets/pages/' . variable('safeName'));
-	echo '</div>' . variable('br');
+function before_file() {
+	if (nodeIs(SITEHOME)) return;
+	page_banner();
+}
+
+function page_banner() {
+	$at = variable('node'); //nodeIs(SITEHOME) ? 'safeName' : 
+	$pageImage = SITEPATH . '/' . ($img = 'assets/pages/' . $at) . '-portrait.jpg';
+	if (!disk_file_exists($pageImage)) return;
+
+	$blur = in_array($at, variableOr('blur-banners-at', [])) ? ' style="filter: blur(5px);"' : '';
+
+	echo replaceItems('<div class="banner banner-%where%">
+		<img class="img-fluid show-in-portrait"%style% src="%url%%image%-portrait.jpg" />
+		<img class="img-fluid show-in-landscape"%style% src="%url%%image%-landscape.jpg" />
+	</div>' . BRNL,
+		['where' => $at, 'url' => variable('assets-url'), 'image' => $img, 'style' => $blur], '%');
 }
 
 function after_file_todo() {

@@ -1,0 +1,27 @@
+#content { padding-top: 20px; }
+#content h2:first { margin-top: 0; }
+
+#content a {
+	font-size: 120%;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+.brinda-adige-icon { background-image: url(brinda-adige-icon.png); }
+.centre-icon { background-image: url(centre-icon.png); }
+.png-icon { background-size: contain; background-position: left center; background-repeat: no-repeat; padding-left: 1.6rem; }
+
+.node-donate .engage ol li { margin-bottom: 6px!important; }
+
+#content h2:not(.amadeus-icon) { padding: 8px; border-radius: 12px; display: inline-block; font-size: 25px; margin-bottom: 12px; }
+.composite-work h2 { display: block!important; }
+#content h2.block { display: block; margin: 15px 0 10px 0; }
+#content h2, .site-bgd { background-color: var(--amadeus-heading-bgd, #ccc); }
+
+.node-index .in-page { display: none!important; }
+
+.alternate-color { color: #A42C96; }
+#content { color: #1E3973; font-size: 22px; line-height: 1.2; }
+#content h3.cursive { font-size: 45px; }
+
+.bordered-image { border-radius: 50%; }

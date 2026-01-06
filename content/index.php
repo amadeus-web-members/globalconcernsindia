@@ -15,6 +15,7 @@ contentBox('end');
 
 variables([
 	'in-node' => true,
+	'skip-directory' => false, //being set in cms.php
 	'directory_of' => 'programs',
 	'directory_use_excerpts' => true,
 ]);

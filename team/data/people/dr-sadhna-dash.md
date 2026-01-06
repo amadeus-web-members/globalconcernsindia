@@ -1,0 +1,5 @@
+Sadhna is a human resources practitioner who turned academician. She brings to the table over 34 years of work experience. 
+
+As a Trustee at Global Concerns India, she works closely with the GCI to support and build on the meaningful work being done with children, women, and the community. Sadhna works alongside each member of the GCI team to co-plan activities, manage interns and volunteers, strengthen partnerships where needed, oversee the MIS, and ensure that our reporting reflects both the daily work done and the change we are creating towards deepening GCI's work within the Community.
+
+As GCI expands and engages in more CSR-supported programs, it becomes essential that we align our efforts with systems that ensure transparency, measurable outcomes, and consistent reporting. Sadhna focuses on strengthening processes, thereby enhancing the power of our individual and collective efforts."

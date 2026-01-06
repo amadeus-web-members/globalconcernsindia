@@ -4,6 +4,7 @@ $name = 'Global Concerns India';
 variables([
 	'site-home-in-menu' => true,
 	'home-link-to-section' => true,
+	'sections-have-files' => true,
 	//TODO: 'autofix-encoding' => true,
 
 	'footer-introduction' => 'GCI is a community-based organization dedicated to empowering vulnerable communities, especially urban and rural poor and other marginalized groups, across Bengaluru, Kolar, and Chikkaballapur.',

@@ -52,6 +52,8 @@ variables([
 
 addStyle('styles', SITEASSETS);
 
+if (getQueryParameter('name')) add_body_class('also-content'); //makes people popup have uniform bgd
+
 function enrichThemeVars($vars, $what) {
 	if ($what == 'header' && nodeIs(SITEHOME))
 		$vars['optional-slider'] = getSnippet('parallax-slider');

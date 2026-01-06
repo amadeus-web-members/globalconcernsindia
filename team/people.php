@@ -10,7 +10,7 @@ $urlBase = pageUrl('team/assets/' . $page);
 $folBase = SITEPATH . '/team/assets/' . $page . '/';
 $aboutBase = SITEPATH . '/team/data/' . $page . '/';
 
-sectionId('invitations', 'container');
+sectionId($page, 'container');
 
 $onlyIcons = false;
 
@@ -43,7 +43,9 @@ foreach ($sheet->rows as $ix => $item) {
 	$lastGroup = $group;
 	$wrapInArticle = !$wantedName && $onlyIcons; //NOTE: behaviour - once wrapping starts, it doesnt end!
 
-	$inlineSetting = $wrapInArticle ? 'lightbox noPageUrl' : false;
+	$about = $aboutBase . $safeName . '.md';
+	$aboutExists = disk_file_exists($about);
+	$inlineSetting = $wrapInArticle && $aboutExists ? 'lightbox noPageUrl' : false;
 	$inlineUrl = $wrapInArticle ? pageUrl($page . '/?name=' . $safeName) : false;
 
 	if ($wrapInArticle) {
@@ -70,8 +72,7 @@ foreach ($sheet->rows as $ix => $item) {
 	if ($item[$cols['role']])
 		echo '	<h4><i>' . $item[$cols['role']] . '</i></h4>' . NEWLINES2;
 
-	$about = $aboutBase . $safeName . '.md';
-	if ((!$onlyIcons || $wantedName) && disk_file_exists($about))
+	if (!$wrapInArticle && $aboutExists)
 		renderMarkdown($about);
 	//else if (variable('local')) echo $about;
 

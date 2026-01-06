@@ -37,13 +37,7 @@ foreach ($sheet->rows as $item) {
 $amounts = '<ol>' . variable('nl') . '	<li>' . implode('</li>' . variable('nl') . '	<li>', $items) . '</li>' . variable('nl') . '</ol>';
 $amounts = replaceItems($amounts, ['##upi-id' => subVariable('upi', 'site')['id']]);
 
-$details = renderMarkdown(DONATEPATH . 'details.md', ['echo' => false]);
-$content = renderMarkdown(DONATEPATH . 'content.md', ['echo' => false]);
-
 sectionId('donate', 'container');
-echo cbWrapAndReplaceHr(replaceItems($content, [
-	'donation-form' => $details,
-	'razorpay-links' => $amounts,
-], '%'));
+echo renderAny(DONATEPATH . 'content.md', ['replaces' => ['razorpay-links' => $amounts]]);
 
 sectionEnd();

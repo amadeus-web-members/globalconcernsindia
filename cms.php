@@ -17,10 +17,12 @@ variables([
 
 	'google-analytics' => 'G-8HS3SCXZL2',
 
-	'email' => 'brinda@globalconcernsindia.org',
-	'phone' => $phone = '+91.9845133354', //$callee = 'Narayan',
+	'email' => 'team@globalconcernsindia.org',
+	'email2' => 'brinda@globalconcernsindia.org',
+	'phone' => $phone = '+91.9886300982', //$callee = 'Sadhna',
 	'phone2' => $phone2 = '+91.9845518138', //$callee = 'Brinda',
-	'whatsapp' => $phone, //'whatsapp-info' => ' (' . $callee . ')',
+	'phone3' => $phone3 = '+91.9845133354', //$callee = 'Narayan',
+	'whatsapp' => _whatsAppME($phone, '', true), //'whatsapp-info' => ' (' . $callee . ')',
 
 	'address' => '<a>Registered office</a>: 17 Rhenius Street, 5A Sukhi Apartments, Richmond Town, Bengaluru-560 025',
 	'address-url' => 'https://g.co/kgs/jRVUHEg',

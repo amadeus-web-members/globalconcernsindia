@@ -12,8 +12,6 @@ You may also support the Transformative Leadershsip with Values program that eng
 
 <hr />
 
-%donation-form%
-
 [spacer][Donate to GCI by UPI][/spacer]
 
 [Donate to GCI by UPI](#upi-site)
@@ -25,3 +23,43 @@ You may also support the Transformative Leadershsip with Values program that eng
 ---
 
 %bank-details-snippet%
+
+DIV-CLOSE
+
+[spacer]Donation Amounts & Details[/spacer]
+
+If you are donating, kindly tick the amount and the details below.
+
+You will then have an option of sending the message by email / whatsapp.
+
+## Amounts and Targets
+
+NOTE: The **UPI links** will be up shortly.
+
+%razorpay-links%
+
+---
+
+[spacer]Details About You[/spacer]
+
+Kindly note that amounts above Rs 500 require us to collect your name and PAN number.
+
+DIV-CLOSE DIV-PLAINCONTAINER
+
+<!--start-engage-->
+
+## Donation Details
+
+%engage-note-above%
+
+* Full Name<!--open-->
+* Mobile<!--open-->
+* Email ID
+* Paid by UPI
+* Paid by Bank Transfer
+* Transaction ID<!--open-->
+* PAN Number<!--open-->
+
+If the transaction id cannot be copied, a screenshot would do (attach in the mail draft that opens). NEWLINES2
+
+%engage-note%

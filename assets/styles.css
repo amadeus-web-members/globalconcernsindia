@@ -9,7 +9,9 @@
 
 .brinda-adige-icon { background-image: url(brinda-adige-icon.png); }
 .centre-icon { background-image: url(centre-icon.png); }
-.png-icon { background-size: contain; background-position: left center; background-repeat: no-repeat; padding-left: 1.6rem; }
+.png-icon { background-size: contain; background-position: left center; background-repeat: no-repeat; padding-left: 2.4rem; line-height: 1!important; }
+#footer-social .social-icon { top: 6px!important; }
+#footer-social a { font-weight: normal; }
 
 .node-donate .engage ol li { margin-bottom: 6px!important; }
 

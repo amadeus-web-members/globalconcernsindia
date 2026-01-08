@@ -52,7 +52,7 @@ foreach ($sheet->rows as $ix => $item) {
 		echo replaceHtmlShortcuts('ARTICLE-BOX') . NEWLINE;
 	} else {
 		contentBox($name, $wantedName ? 'h-100' : '');
-		echo SPACERSTART . humanize($name) . SPACEREND . cbCloseAndOpen();
+		//echo SPACERSTART . humanize($name) . SPACEREND . cbCloseAndOpen();
 		sectionId($safeName);
 	}
 

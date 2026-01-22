@@ -1,5 +1,5 @@
 <?php
 define('SITEPATH', __DIR__);
-include_once '../../dawn/spring/entry.php';
+include_once '../spring/entry.php';
 
 runFrameworkFile('site/begin');

@@ -13,6 +13,7 @@ contentBox('introduction', 'container mt-3');
 renderMarkdown(__DIR__ . '/_introduction.md');
 contentBox('end');
 
+//TODO: HI: add these to varnames
 variables([
 	'in-node' => true,
 	'skip-directory' => false, //being set in cms.php
@@ -20,4 +21,4 @@ variables([
 	'directory_use_excerpts' => true,
 ]);
 
-runFeature('directory');
+features::ensureDirectory();

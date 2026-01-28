@@ -22,7 +22,7 @@ variables([
 	'phone' => $phone = '+91.9886300982', //$callee = 'Sadhna',
 	'phone2' => $phone2 = '+91.9845518138', //$callee = 'Brinda',
 	'phone3' => $phone3 = '+91.9845133354', //$callee = 'Narayan',
-	'whatsapp' => _whatsAppME($phone, '', true), //'whatsapp-info' => ' (' . $callee . ')',
+	'whatsapp' => whatsapp_me($phone, '', true), //'whatsapp-info' => ' (' . $callee . ')',
 
 	'address' => '<a>Registered office</a>: 17 Rhenius Street, 5A Sukhi Apartments, Richmond Town, Bengaluru-560 025',
 	'address-url' => 'https://g.co/kgs/jRVUHEg',
@@ -30,16 +30,15 @@ variables([
 	'address2-url' => 'https://maps.app.goo.gl/XRg1XgStds1Rx3sX7', //TODO: set this in google maps
 
 	'upi' => [ 'site' => [ 'id' => 'gcindia1@sbi', 'name' => str_replace(' ', '+', $name) ] ],
-	'social' => [
-		[ 'type' => 'instagram', 'url' => 'https://www.instagram.com/globalconcernsindia', 'name' => 'Instagram' ],
-		[ 'type' => 'facebook', 'url' => 'https://www.facebook.com/GlobalConcernsIndia', 'name' => 'Facebook' ],
-		[ 'type' => 'centre-icon png-icon', 'url' => 'https://www.facebook.com/GCI.CreativityCentre/', 'name' => 'Creativity Centre on FB' ],
-		[ 'type' => 'linkedin', 'url' => 'https://www.linkedin.com/company/global-concerns-india/', 'name' => 'LinkedIn' ],
-		[ 'type' => 'brinda-adige-icon png-icon', 'url' => 'https://www.linkedin.com/in/brinda-adige/', 'name' => 'Brinda on LI' ],
-		[ 'type' => 'youtube', 'url' => 'https://www.youtube.com/@GlobalConcernsIndia', 'name' => 'YouTube' ],
+	socialBuilder::variableName => socialBuilder::create()
+		->addInstagram('globalconcernsindia', 'Instagram')
+		->addExternal('facebook', 'https://www.facebook.com/GlobalConcernsIndia', 'Facebook')
+		->addExternal('centre-icon png-icon', 'https://www.facebook.com/GCI.CreativityCentre/', 'Creativity Centre on FB')
+		->addLinkedIn('company/global-concerns-india/', 'LinkedIn')
+		->addLinkedIn('in/brinda-adige/', 'Brinda on LI', 'brinda-adige-icon png-icon')
+		->addYoutube('@GlobalConcernsIndia', 'YouTube')
+		->getItems(),
 		//TODO: Newsletter / groups.io
-	],
-
 
 	'blur-banners-at' => ['index', 'schooling'],
 

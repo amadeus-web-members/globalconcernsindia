@@ -22,7 +22,7 @@ variables([
 	'phone' => $phone = '+91.9886300982', //$callee = 'Sadhna',
 	'phone2' => $phone2 = '+91.9845518138', //$callee = 'Brinda',
 	'phone3' => $phone3 = '+91.9845133354', //$callee = 'Narayan',
-	'whatsapp' => whatsapp_me($phone, '', true), //'whatsapp-info' => ' (' . $callee . ')',
+	'whatsapp' => whatsapp_clean($phone, '', true), //'whatsapp-info' => ' (' . $callee . ')',
 
 	'address' => '<a>Registered office</a>: 17 Rhenius Street, 5A Sukhi Apartments, Richmond Town, Bengaluru-560 025',
 	'address-url' => 'https://g.co/kgs/jRVUHEg',
@@ -50,6 +50,7 @@ variables([
 ]);
 
 addStyle('styles', SITEASSETS);
+setup_cdn();
 
 if (getQueryParameter('name')) add_body_class('also-content'); //makes people popup have uniform bgd
 

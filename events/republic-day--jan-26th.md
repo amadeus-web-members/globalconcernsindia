@@ -29,7 +29,7 @@ DIV-CLOSE <!--end .large-list-->
 DIV-CLOSE <!--end .col7-->
 
 DIV-CELL6
-<img class="img-fluid" src="%url%%section%/%nodeSlug%/2026/gci republic-day-poster.jpg" />
+<img class="img-fluid" src="%cdn%%section%/%nodeSlug%/2026/gci republic-day-poster.jpg" />
 DIV-CLOSE <!--end .col5-->
 
 

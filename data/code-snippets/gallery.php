@@ -1,6 +1,6 @@
 <?php
-$url = getHtmlVariable('url') . $relUrl = concatSlugs([sectionValue(), nodeValue(), date('Y')]) . '/';
-$images = _skipNodeFiles(scandir(SITEPATH . '/' . $relUrl), SKIPFOLDERS);
+$url = getHtmlVariable('cdn') . $relUrl = concatSlugs([sectionValue(), nodeValue(), date('Y')]) . '/';
+$images = _skipNodeFiles(scandir(SITECDNPATH . $relUrl), SKIPFOLDERS);
 
 $op = [htmlUX::valueOf(htmlUX::artAll)];
 $start = htmlUX::valueOf(htmlUX::art4);
